@@ -1,6 +1,6 @@
 installdir = $(pkglibdir)/python/Plugins/Extensions
 
-SUBDIRS = CutListEditor DVDBurn FileCommander MediaPlayer MediaScanner PicturePlayer SocketMMI TuxboxPlugins StreamlinkWrapper YTDLWrapper YTDLPWrapper
+SUBDIRS = CutListEditor DVDBurn FileCommander MediaPlayer MediaScanner PicturePlayer SocketMMI TuxboxPlugins StreamlinkWrapper YTDLWrapper YTDLPWrapper extraspanel
 
 if HAVE_LIBDDVD
 SUBDIRS += DVDPlayer
@@ -10,8 +10,12 @@ if VUSOLO4K
 SUBDIRS += MiniTV QuadPip
 endif
 
-if VUULTIMO4K
+if VUDUO4KSE
 SUBDIRS += MiniTV QuadPip
+endif
+
+if VUULTIMO4K
+SUBDIRS += extraspanel
 endif
 
 if GB7252
